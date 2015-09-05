@@ -44,7 +44,7 @@
 #   ------------------------------------------------------------
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
-
+export HISTSIZE=500000
 
 #   -----------------------------
 #   2.  MAKE TERMINAL BETTER
