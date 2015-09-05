@@ -1,0 +1,66 @@
+set nocompatible
+set number
+
+filetype plugin indent on
+syntax on
+
+" Initialisation de pathogen
+call pathogen#infect()
+call pathogen#helptags()
+
+" display the status line
+set laststatus=2
+" then display the filename full path
+set statusline+=%F
+
+" @@@@@@@@ NERDTREE
+"autocmd vimenter * NERDTree
+" close nerdtree when leaving vim
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType 
+
+" Fast saving
+nmap <leader>w :w!<CR>
+
+" Set to auto read when a file is changed from the outside
+set autoread
+
+set showcmd                         " Display incomplete commands
+set ruler                           " Show cursor position
+set langmenu=en_US.UTF-8
+
+"Always show current position
+set ruler
+
+" Ignore case when searching
+set ignorecase
+
+" When searching try to be smart about cases 
+set smartcase
+
+" Highlight search results
+set hlsearch
+
+" Makes search act like search in modern browsers
+set incsearch
+
+" For regular expressions turn magic on
+set magic
+
+" No annoying sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+
+"""""""""""""""""""""
+" Text, tab and indent related
+" """""""""""""""""""""
+" Use spaces instead of tabs
+set expandtab
+
+" Be smart when using tabs ;)
+set smarttab
+
+" 1 tab == 2 spaces
+set shiftwidth=2
+set tabstop=2
