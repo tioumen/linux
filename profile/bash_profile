@@ -19,9 +19,14 @@
 #   1.  ENVIRONMENT CONFIGURATION
 #   -------------------------------
 
-#   Change Prompt
+#   Change Prompt - red prompt if root
 #   ------------------------------------------------------------
-    export PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[0;33m\]\w\[\e[m\] \[\e[0;32m\]\$ \[\e[m\]'
+    if [ $UID -eq 0 ]
+    then
+      export PS1='\[\e[0;31m\]\u\[\e[m\] \[\e[0;33m\]\w\[\e[m\] \[\e[0;31m\]\$ \[\e[m\]'
+    else
+      export PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[0;33m\]\w\[\e[m\] \[\e[0;32m\]\$ \[\e[m\]'
+    fi
 #    export PS2="| => "
 
 #   Set Paths
